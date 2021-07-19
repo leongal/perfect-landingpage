@@ -431,6 +431,34 @@ p {
   background: transparent;
   box-shadow: none;
 }
+.btn-outer {
+  display: inline-block;
+}
+.btn, .btn-outer {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0px 5px rgb(0 0 0 / 20%), 0 2px 5px rgb(0 0 0 / 17%);
+}
+.btn-outer .btn {
+  background: transparent !important;
+  box-shadow: none;
+}
+button, input[type="submit"] {
+  cursor: pointer;
+}
+.btn-primary {
+  color: #fff;
+}
+.btn-primary-outer{
+  background-color: #07cb79;
+}
 .btn-lg {
   font-size: 14px;
   font-weight: 700;
@@ -654,4 +682,179 @@ p {
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
   border-right: 10px solid #fff;
+}
+.timeline-box-compact .date, .timeline-box-compact h3, .timeline-box-compact h4 {
+  text-align: left;
+}
+.timeline-box .date {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  /* text-align: center; */
+  margin-bottom: 15px;
+}
+.timeline-box-compact .date span {
+  background-color: #07cb79;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+  position: relative;
+  padding: 5px 8px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.timeline-box-compact .date span:before {
+  background-color: #07cb79;
+  content: '';
+  width: 0;
+  height: 0;
+  top: 100%;
+  left: 5px;
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-width: 0 0 8px 8px;
+  border-color: transparent;
+}
+.section-contact{
+
+}
+h3 {
+  font-size: 24px;
+}
+form {
+  display: block;
+  margin-top: 0em;
+}
+.input-field {
+  position: relative;
+  margin-bottom: 30px;
+}
+.input-field input, .input-field textarea {
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d8d8d8;
+  border-radius: 0;
+}
+select, input[type='tel'], input[type='text'], input[type='email'], input[type='search'], input[type='password'] {
+    height: 34px;
+}
+select, textarea, input[type='tel'], input[type='text'], input[type='email'], input[type='search'], input[type='password'] {
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.42857143;
+    width: 100%;
+    display: block;
+    padding: 6px 12px;
+    background: transparent;
+    border: 1px solid #d8d8d8;
+    border-radius: 4px;
+}
+input[type="text" i] {
+    padding: 1px 2px;
+}
+.input-field label {
+  top: 10px;
+  left: 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: absolute;
+  pointer-events: none;
+  -webkit-transition: 0.15s ease all;
+  -moz-transition: 0.15s ease all;
+  transition: 0.15s ease all;
+}
+label {
+  cursor: default;
+}
+.input-field .line {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.input-field .line:before {
+  left: 50%;
+}
+.input-field .line:after {
+  right: 50%;
+}
+.input-field .line:before, .input-field .line:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  -webkit-transition: 0.15s ease all;
+  -moz-transition: 0.15s ease all;
+  transition: 0.15s ease all;
+}
+textarea {
+  resize: none;
+}
+.contact-info.has-map {
+  position: relative;
+  padding-bottom: 266px;
+}
+.contact-info.section-box {
+  padding: 0;
+}
+.contact-info .contact-list {
+  list-style: none;
+  padding: 45px 35px 30px;
+  margin: 0;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.contact-info .contact-list li {
+  margin-bottom: 10px;
+}
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.contact-info .contact-list strong {
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+  width: 85px;
+  float: left;
+}
+.contact-info .contact-list strong, .contact-info .contact-list span {
+  display: block;
+}
+.contact-info .contact-list a {
+  color: inherit;
+  -webkit-transition: opacity 0.15s linear 0s;
+  -moz-transition: opacity 0.15s linear 0s;
+  transition: opacity 0.15s linear 0s;
+}
+#map {
+  width: 100%;
+  height: 266px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.gm-style {
+  font: 400 11px Roboto, Arial, sans-serif;
+  text-decoration: none;
 }
