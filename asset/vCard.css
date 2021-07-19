@@ -1,6 +1,18 @@
+@font-face {
+  font-family: 'FredokaOne';
+  src: url('fonts/FredokaOne-Regular.ttf');
+}
+@font-face {
+  font-family: 'OpenSans';
+  src: url('fonts/OpenSans.ttf');
+}
+@font-face {
+  font-family: 'OpenSansReg';
+  src: url('fonts/OpenSans-Regular.ttf');
+}
 body {
   color: #3d4451;
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSansReg", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   background-color: #efefef;
@@ -27,7 +39,7 @@ img {
 }
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSansReg", sans-serif;
   margin: 0 0 25px 0;
   line-height: 1.1;
 }
@@ -101,7 +113,7 @@ a{
   color: #9a9da2 !important;
   font-size: 30px;
   font-weight: 400;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'FredokaOne', cursive;
   line-height: 40px;
   display: inline-block;
   vertical-align: middle;
@@ -210,6 +222,7 @@ a{
   text-align: center;
 }
 .section-box{
+  font-family: "OpenSansReg", sans-serif;
   padding: 40px 50px;
 }
 .section-about .section-box{
@@ -256,10 +269,15 @@ a{
   margin-bottom: 25px;
   border-bottom: 1px solid #dedede;
 }
+.nav-wrap .nav a {
+  white-space: nowrap;
+  font-family: "OpenSans", sans-serif;
+}
 .profile-preword{
   margin-bottom: 28px;
 }
 .profile-preword span{
+  font-family: "OpenSansReg", sans-serif;
   background-color: #07cb79;
   color: #fff;
   font-size: 14px;
@@ -271,7 +289,6 @@ a{
   position: relative;
 }
 .profile-preword span:before {
-  background-color: #07cb79;
   content: '';
   width: 0;
   height: 0;
@@ -282,6 +299,7 @@ a{
   border-style: solid;
   border-width: 0 0 8px 8px;
   border-color: transparent;
+  border-left: 10px solid #07cb79;
 }
 .section-about .profile-title{
   font-size: 36px;
@@ -302,6 +320,7 @@ a{
   margin: 0;
   padding: 0;
   list-style: none;
+  font-family: "OpenSansReg", sans-serif;
 }
 .profile-list li{
   margin-bottom: 13px;
@@ -373,6 +392,10 @@ a{
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
+.social li a:hover {
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 .social li a .rsicon {
   color: #fff;
   /* width: 30px; */
@@ -381,6 +404,7 @@ a{
 }
 .section-txt-btn{
   color: #000;
+  font-family: "OpenSansReg", sans-serif;
   font-size: 20px;
   font-weight: 300;
   line-height: 1.8;
@@ -410,7 +434,7 @@ p {
 .btn {
   font-size: 14px;
   font-weight: 400;
-  font-family: "Open Sans", sans-serif;
+  font-family: "OpenSans", sans-serif;
   line-height: 1;
   text-align: center;
   vertical-align: middle;
@@ -546,6 +570,7 @@ button, input[type="submit"] {
 }
 .timeline .timeline-inner {
   position: relative;
+  font-family: "OpenSansReg", sans-serif;
 }
 .clearfix:before, .clearfix:after {
   content: " ";
@@ -609,7 +634,7 @@ button, input[type="submit"] {
   height: 41px;
   display: block;
   position: absolute;
-  background-image: url(asset/arrows.png);
+  background-image: url(arrows.png);
   background-repeat: no-repeat;
 }
 .timeline-box-left .timeline-box-inner .arrow:before {
@@ -707,7 +732,6 @@ button, input[type="submit"] {
   border-radius: 3px;
 }
 .timeline-box-compact .date span:before {
-  background-color: #07cb79;
   content: '';
   width: 0;
   height: 0;
@@ -718,9 +742,10 @@ button, input[type="submit"] {
   border-style: solid;
   border-width: 0 0 8px 8px;
   border-color: transparent;
+  border-left: 10px solid #07cb79;
 }
 .section-contact{
-
+  padding-bottom: 30px;
 }
 h3 {
   font-size: 24px;
@@ -743,6 +768,20 @@ form {
   border-bottom: 1px solid #d8d8d8;
   border-radius: 0;
 }
+.input-field input:focus+span+label, .input-field textarea:focus+span+label{
+  top: -15px;
+  font-size: 11px;
+  color: #07cb79;
+}
+.input-field input:focus,
+.input-field textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #07cb79;
+}
+.input-field.used .line:before,
+.input-field.used .line:after {
+  width: 50%; 
+}
 select, input[type='tel'], input[type='text'], input[type='email'], input[type='search'], input[type='password'] {
     height: 34px;
 }
@@ -750,13 +789,13 @@ select, textarea, input[type='tel'], input[type='text'], input[type='email'], in
     color: #333;
     font-size: 14px;
     font-weight: 400;
-    font-family: "Open Sans", sans-serif;
+    font-family: "OpenSans", sans-serif;
     line-height: 1.42857143;
     width: 100%;
     display: block;
     padding: 6px 12px;
     background: transparent;
-    border: 1px solid #d8d8d8;
+    /* border: 1px solid #d8d8d8; */
     border-radius: 4px;
 }
 input[type="text" i] {
