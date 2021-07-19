@@ -1,3 +1,10 @@
+body {
+  color: #3d4451;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #efefef;
+}
 .article, aside, details, figcaption, figure, footer, header, main, nav, section{
   display: block;
 }
@@ -494,4 +501,101 @@ p {
 }
 .section-skills .section-box {
   padding-bottom: 50px;
+}
+.timeline{
+  position: relative;
+}
+.timeline .timeline-bar {
+  background-color: #07cb79;
+  content: '';
+  width: 4px;
+  opacity: 0.2;
+  margin-left: -2px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+}
+.timeline .timeline-inner {
+  position: relative;
+}
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table;
+}
+.timeline-box-left {
+  float: left;
+  clear: left;
+}
+.timeline-box {
+  width: 50%;
+  color: #757575;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  position: relative;
+}
+.timeline-box-left .dot {
+  right: 0px;
+  margin-right: -4px;
+  background-color: #07cb79;
+}
+.timeline-box-left .dot, .timeline-box-right .dot {
+  background-color: #07cb79;
+  top: 80px;
+  width: 8px;
+  height: 8px;
+  display: block;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+.timeline-box-inner {
+  padding: 20px 5%;
+  position: relative;
+  border-width: 5px 0 0 0;
+  border-style: solid;
+  border-top-color: #07cb79;
+}
+.animate-right.animated {
+  opacity: 1;
+  visibility: visible;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+  -moz-transition: -moz-transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+  transition: transform 400ms ease-out 100ms, opacity 400ms ease-out 100ms;
+}
+.timeline-box-left .timeline-box-inner .arrow {
+  right: -12px;
+  background-position: -18px 0;
+}
+.timeline-box-left .arrow, .timeline-box-right .arrow {
+  top: 60px;
+  width: 12px;
+  height: 41px;
+  display: block;
+  position: absolute;
+  background-image: url(img/arrows.png);
+  background-repeat: no-repeat;
+}
+.timeline-box-left .timeline-box-inner .arrow:before {
+  margin-right: 2px;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 10px solid #fff;
+}
+.timeline-box-left .arrow:before, .timeline-box-right .arrow:before {
+  width: 0;
+  height: 0;
+  content: '';
+  display: block;
+}
+.timeline-box-left .timeline-box-inner {
+  margin-right: 35px;
 }
